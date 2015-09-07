@@ -7,6 +7,8 @@ using System.Net;
 using System.Web;
 using System.Web.Mvc;
 using NaturalState.Web.Models;
+using CsvHelper;
+using System.IO;
 
 namespace NaturalState.Web.Controllers
 {
@@ -33,6 +35,21 @@ namespace NaturalState.Web.Controllers
                 return HttpNotFound();
             }
             return View(coop);
+        }
+
+        public ActionResult ViewImport(HttpPostedFileBase file)
+        {
+            List<Coop> newCoops = new List<Coop>();
+            using (var sr = new StreamReader(@"C:\Users\Scott\Documents\GitHub\NaturalStateFood\NaturalState.Web\Test\Book1.csv"))
+            {
+                var csv = new CsvReader(sr);
+                while (csv.Read())
+                {
+                    var record = csv.GetRecord<Coop>();
+                    newCoops.Add(record);
+                }
+            }
+            return View(newCoops);
         }
 
         // GET: Coops/Create

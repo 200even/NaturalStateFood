@@ -44,6 +44,10 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="CsvHelper, Version=2.0.0.0, Culture=neutral, PublicKeyToken=8c4959082be5c823, processorArchitecture=MSIL">
+      <HintPath>..\packages\CsvHelper.2.13.2.0\lib\net40-client\CsvHelper.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
       <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
       <Private>True</Private>
@@ -185,6 +189,8 @@
     <Content Include="Views\Coops\Details.cshtml" />
     <Content Include="Views\Coops\Edit.cshtml" />
     <Content Include="Views\Coops\Index.cshtml" />
+    <Content Include="Views\Coops\ViewImport.cshtml" />
+    <Content Include="Test\Book1.csv" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

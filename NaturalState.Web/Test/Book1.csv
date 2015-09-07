@@ -1,0 +1,2 @@
+Id,Name,City,State,Phone,Url,Email,MembershipCost,MedianIncome,Population,IsOpen
+32,Test,Test,TN,9919111119,www.test.com,test@test.com,500,50000,100000,TRUE
